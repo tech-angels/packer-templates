@@ -21,26 +21,26 @@ $ brew install packer
 
 ## Build vagrant box
 
-```
-packer build ta-debian-7.1.0.json
+```bash
+$ packer build ta-debian-7.1.0.json
 ```
 
 or optionnaly, select only one provider, for example ```vmware```:
 
-```
-packer build -only vmware ta-debian-7.1.0.json
+```bash
+$ packer build -only vmware ta-debian-7.1.0.json
 ```
 
 ### Install your new box
 
-```
-vagrant box add ta-debian-7.1.0 ./packer_vmware_vmware.box
+```bash
+$ vagrant box add ta-debian-7.1.0 ./packer_vmware_vmware.box
 ```
 
 or
 
-```
-vagrant box add ta-debian-7.1.0 ./packer_virtualbox_virtualbox.box
+```bash
+$ vagrant box add ta-debian-7.1.0 ./packer_virtualbox_virtualbox.box
 ```
 
 The VM image has been imported to vagrant, it's now available on your system.
@@ -72,13 +72,17 @@ end
 
 And initialize the vm:
 
-    vagrant up --provider=vmware_fusion
+```bash
+$ vagrant up --provider=vmware_fusion
+```
 
 The ```--provider``` option is only needed if another vagrant provider is available, like virtualbox.
 
 ### Ignore vagrant boxes in git
 
-    echo ".vagrant" >> ~/.gitignore
+```bash
+$ echo ".vagrant" >> ~/.gitignore
+```
 
 ## Contributing
 
