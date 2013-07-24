@@ -93,4 +93,5 @@ The ```--provider``` option is only needed if another vagrant provider is availa
   Many thanks to [Mitchell Hashimoto](https://github.com/mitchellh/) for his awesome work on [Packer](https://github.com/mitchellh/packer) and [Vagrant](https://github.com/mitchellh/vagrant).
 
   Tech-Angels Inc. - http://www.tech-angels.com/
+  
   [![Tech-Angels](http://media.tumblr.com/tumblr_m5ay3bQiER1qa44ov.png)](http://www.tech-angels.com)
