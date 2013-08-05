@@ -5,6 +5,13 @@
 The current and only template was created for Debian 7.1.0 VM boxes, because this is the default environment at Tech-Angels.
 The boxes are "vanilla" with a minimal setup, 256MB RAM, 1 CPU. These settings can be easily changed in vagrant.
 
+## Direct Download
+
+Packaged boxes are available for vmware and virtualbox:
+
+* https://www.dropbox.com/s/t2taop7msj0to2u/packer_virtualbox_virtualbox.box (sha: 55b96389cd2175d91d225dfdfcfece044cc4755b)
+* https://www.dropbox.com/s/wezr7ucgxa8tuh8/packer_vmware_vmware.box (sha: 0a512b92202cd6c12d3c2ee91c08b9dc416e325f)
+
 ## Prerequisites
 
 * Packer (>= 0.2.0)(http://www.packer.io/downloads.html)
