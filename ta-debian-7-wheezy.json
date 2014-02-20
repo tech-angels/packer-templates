@@ -22,15 +22,15 @@
       "guest_os_type": "Debian_64",
       "headless": true,
       "http_directory": "http",
-      "iso_checksum": "b86774fe4de88be6378ba3d71b8029bd",
+      "iso_checksum": "e7e9433973f082a297793c3c5010b2c5",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/debian-cd/7.2.0/amd64/iso-cd/debian-7.2.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
-      "type": "virtualbox",
+      "type": "virtualbox-iso",
       "vboxmanage": [
         [
           "modifyvm",
@@ -67,16 +67,16 @@
       "disk_size": 10140,
       "guest_os_type": "debian5-64",
       "http_directory": "http",
-      "iso_checksum": "b86774fe4de88be6378ba3d71b8029bd",
+      "iso_checksum": "e7e9433973f082a297793c3c5010b2c5",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/debian-cd/7.2.0/amd64/iso-cd/debian-7.2.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "tools_upload_flavor": "linux",
-      "type": "vmware",
+      "type": "vmware-iso",
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
         "memsize": "256",
@@ -91,7 +91,7 @@
     {
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "scripts": [
             "scripts/base.sh",
             "scripts/vagrant.sh",
@@ -100,7 +100,7 @@
             "scripts/cleanup.sh"
           ]
         },
-        "vmware": {
+        "vmware-iso": {
           "scripts": [
             "scripts/base.sh",
             "scripts/vagrant.sh",
