@@ -2,7 +2,7 @@
 
 ## Boxes description
 
-The current and only template was created for Debian 7.1.0 VM boxes, because this is the default environment at Tech-Angels.
+The current and only template was created for Debian 7.4.0 VM boxes, because this is the default environment at Tech-Angels.
 The boxes are "vanilla" with a minimal setup, 256MB RAM, 1 CPU. These settings can be easily changed in vagrant.
 
 ## Direct Download
@@ -14,7 +14,7 @@ Packaged boxes are available for vmware and virtualbox:
 
 ## Prerequisites
 
-* Packer (>= 0.2.0)(http://www.packer.io/downloads.html)
+* Packer (>= 0.5.0)(http://www.packer.io/downloads.html)
 * Vagrant (>= 1.2.4)(http://downloads.vagrantup.com/)
 * Vmware or Virtualbox
 * Vagrant vmware plugin if you're using vmware (http://www.vagrantup.com/vmware)
@@ -29,25 +29,25 @@ $ brew install packer
 ## Build vagrant box
 
 ```bash
-$ packer build ta-debian-7.1.0.json
+$ packer build ta-debian-7-wheezy.json
 ```
 
 or optionnaly, select only one provider, for example ```vmware```:
 
 ```bash
-$ packer build -only vmware ta-debian-7.1.0.json
+$ packer build -only vmware ta-debian-7-wheezy.json
 ```
 
 ### Install your new box
 
 ```bash
-$ vagrant box add ta-debian-7.1.0 ./packer_vmware_vmware.box
+$ vagrant box add ta-debian-7-wheezy ./packer_vmware-iso_vmware.box
 ```
 
 or
 
 ```bash
-$ vagrant box add ta-debian-7.1.0 ./packer_virtualbox_virtualbox.box
+$ vagrant box add ta-debian-7-wheezy ./packer_virtualbox-iso_virtualbox.box
 ```
 
 The VM image has been imported to vagrant, it's now available on your system.
@@ -68,7 +68,7 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ta-debian-7.1.0"
+  config.vm.box = "ta-debian-7-wheezy"
 
   # Make ssh login secure
   # config.ssh.private_key_path = '~/.ssh/id_rsa'
