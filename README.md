@@ -68,7 +68,7 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ta-debian-7.1.0"
+  config.vm.box = "ta-debian-7-wheezy"
 
   # Make ssh login secure
   # config.ssh.private_key_path = '~/.ssh/id_rsa'
