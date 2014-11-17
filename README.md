@@ -26,6 +26,18 @@ $ brew tap homebrew/binary
 $ brew install packer
 ```
 
+## Configure the vagrant box
+
+Edit the ta-debian-7-wheezy.json (or the other one you prefer) and check the variables at the beginning of the file.
+
+*Note*:
+
+The debian iso file name contains the version number and, as soon as a new release will be out and the 770 will be removed from the debian servers, the debian-770-wheezy.json file will be outdated and you'll get the "ISO download failed" error after running the build command.
+To fix the issue go on http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/, check which is the latest net-inst version and copy its checksum from the MD5SUMS file. Then edit the .json file and update these variables at the beginning of the .json file:
+* "iso_url": update the link to the iso file
+* "iso_md5": insert the new MD5 checksum
+* "vm_name": update the version
+
 ## Build vagrant box
 
 ```bash
@@ -37,6 +49,10 @@ or optionnaly, select only one provider, for example ```vmware```:
 ```bash
 $ packer build -only vmware ta-debian-7-wheezy.json
 ```
+*NOTE* Unfortunately Packer has a bug and will not recognize the -only option until [this bug](https://github.com/mitchellh/packer/pull/1402) will be open.
+
+Meanwhile you can use the ta-debian-7-wheezy-virtualbox.json or ta-debian-7-wheezy-virtual-puppet.json instead of ta-debian-7-wheezy.json
+
 
 ### Install your new box
 
@@ -104,5 +120,5 @@ $ echo ".vagrant" >> ~/.gitignore
   Many thanks to [Mitchell Hashimoto](https://github.com/mitchellh/) for his awesome work on [Packer](https://github.com/mitchellh/packer) and [Vagrant](https://github.com/mitchellh/vagrant).
 
   Tech-Angels Inc. - http://www.tech-angels.com/
-  
+
   [![Tech-Angels](http://media.tumblr.com/tumblr_m5ay3bQiER1qa44ov.png)](http://www.tech-angels.com)
