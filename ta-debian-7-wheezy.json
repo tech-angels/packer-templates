@@ -5,7 +5,7 @@
     "disk_size": 10140,
     "ssh_port": 22,
     "ssh_wait_timeout": "10000s",
-    "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-7.8.0-amd64-netinst.iso",
+    "iso_url": "http://cdimage.debian.org/cdimage/archive/7.8.0/amd64/iso-cd/debian-7.8.0-amd64-netinst.iso",
     "iso_md5": "a91fba5001cf0fbccb44a7ae38c63b6e",
     "vm_name": "debian-780-wheezy"
   },
